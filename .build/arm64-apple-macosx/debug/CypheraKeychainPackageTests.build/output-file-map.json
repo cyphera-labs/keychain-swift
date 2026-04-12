@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.build/primary.swiftdeps"
+  },
+  "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.build/runner.d",
+    "object": "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.build/runner.dia"
+  }
+}
