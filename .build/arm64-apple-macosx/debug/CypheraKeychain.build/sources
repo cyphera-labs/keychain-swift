@@ -1,9 +1,0 @@
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/AwsKmsProvider.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/AzureKvProvider.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/Bridge.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/EnvProvider.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/FileProvider.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/GcpKmsProvider.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/MemoryProvider.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/Provider.swift
-/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/Sources/CypheraKeychain/VaultProvider.swift
