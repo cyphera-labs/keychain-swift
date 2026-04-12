@@ -2,25 +2,49 @@ name: CI
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
-  build-and-test:
-    name: Build & Test (Swift ${{ matrix.swift-version }})
+  unit:
+    name: Unit Tests
     runs-on: macos-latest
-    strategy:
-      matrix:
-        swift-version: ["5.9", "5.10"]
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Select Swift ${{ matrix.swift-version }}
-        uses: swift-actions/setup-swift@v2
-        with:
-          swift-version: ${{ matrix.swift-version }}
-
+      - uses: actions/checkout@v6
       - name: Build
         run: swift build
-
       - name: Test
         run: swift test
+
+  integration:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    services:
+      vault:
+        image: hashicorp/vault:1.18
+        ports: ["8200:8200"]
+        env:
+          VAULT_DEV_ROOT_TOKEN_ID: root
+          VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
+        options: >-
+          --cap-add IPC_LOCK
+          --health-cmd "vault status"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Seed Vault
+        run: |
+          curl -sf -X POST http://localhost:8200/v1/secret/data/test-key \
+            -H "X-Vault-Token: root" \
+            -H "Content-Type: application/json" \
+            -d '{"data":{"material":"2B7E151628AED2A6ABF7158809CF4F3C","version":1,"status":"active"}}'
+      - name: Build & Test
+        run: |
+          docker run --rm --network host \
+            -e VAULT_ADDR=http://localhost:8200 \
+            -e VAULT_TOKEN=root \
+            -v "$PWD":/app -w /app swift:6.0 \
+            swift test

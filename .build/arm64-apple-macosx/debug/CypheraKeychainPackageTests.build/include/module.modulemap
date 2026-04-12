@@ -1,0 +1,3 @@
+module CypheraKeychainPackageTests {
+    header "/Users/lgutschow/workspace/_github/cyphera-labs/keychain-swift/.build/arm64-apple-macosx/debug/CypheraKeychainPackageTests.build/include/CypheraKeychainPackageTests-Swift.h"
+}
