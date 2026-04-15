@@ -1,6 +1,7 @@
 # keychain-swift
 
 [![CI](https://github.com/cyphera-labs/keychain-swift/actions/workflows/ci.yml/badge.svg)](https://github.com/cyphera-labs/keychain-swift/actions/workflows/ci.yml)
+[![Security](https://github.com/cyphera-labs/keychain-swift/actions/workflows/codeql.yml/badge.svg)](https://github.com/cyphera-labs/keychain-swift/actions/workflows/codeql.yml)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
 Key provider for Cyphera -- resolve keys from AWS KMS, GCP, Azure Key Vault, HashiCorp Vault, env vars, and files.
