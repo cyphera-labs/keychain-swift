@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 /// Resolves keys from HashiCorp Vault KV v2 secrets.
 public final class VaultProvider: KeyProvider {
